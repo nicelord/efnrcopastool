@@ -46,8 +46,7 @@ public class MainForm extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        cmbBln = new javax.swing.JComboBox();
-        btnLoad = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtSrc = new javax.swing.JTextArea();
@@ -61,6 +60,7 @@ public class MainForm extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("EF-NR COPAS TOOL");
@@ -78,7 +78,7 @@ public class MainForm extends javax.swing.JFrame {
         txtRes21.setRows(5);
         jScrollPane6.setViewportView(txtRes21);
 
-        jButton4.setText("SUBMIT");
+        jButton4.setText("ADA PPN");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -91,10 +91,10 @@ public class MainForm extends javax.swing.JFrame {
 
         jLabel3.setText("DPP+PPN");
 
-        btnLoad.setText("LOAD");
-        btnLoad.addActionListener(new java.awt.event.ActionListener() {
+        jButton2.setText("PPN 0");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLoadActionPerformed(evt);
+                jButton2ActionPerformed(evt);
             }
         });
 
@@ -105,27 +105,26 @@ public class MainForm extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 222, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addGap(0, 72, Short.MAX_VALUE)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                .addComponent(cmbBln, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jScrollPane6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 66, Short.MAX_VALUE)
+                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(btnLoad, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 63, Short.MAX_VALUE))
-                        .addGap(11, 11, 11)
-                        .addComponent(jLabel3)
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addGap(45, 45, 45)
+                                .addComponent(jLabel3))
+                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -146,13 +145,12 @@ public class MainForm extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton4)
-                            .addComponent(btnLoad)
-                            .addComponent(cmbBln, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE))
+                            .addComponent(jButton2)))
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 251, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("REGISTER PENJUALAN CREDIT MEMO", jPanel2);
+        jTabbedPane1.addTab("REGISTER PENJUALAN TRX DETAIL ALL", jPanel2);
 
         txtSrc.setColumns(20);
         txtSrc.setRows(5);
@@ -203,23 +201,21 @@ public class MainForm extends javax.swing.JFrame {
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel5)
-                                .addGap(41, 41, 41)
-                                .addComponent(jLabel6))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(0, 12, Short.MAX_VALUE))))
+                        .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE))
+                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel5)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(7, 7, 7)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane3)
+                            .addComponent(jLabel6))))
+                .addGap(0, 10, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -231,7 +227,6 @@ public class MainForm extends javax.swing.JFrame {
                     .addComponent(jLabel6))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE)
@@ -241,21 +236,33 @@ public class MainForm extends javax.swing.JFrame {
                             .addComponent(jButton3)
                             .addComponent(jButton1))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton5)))
+                        .addComponent(jButton5))
+                    .addComponent(jScrollPane1))
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("EFAKTUR", jPanel1);
+        jTabbedPane1.addTab("EFAKTUR RETUR PAJAK KELUARAN", jPanel1);
+
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setText("LazyTool | AKS Team - Pontianak");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jTabbedPane1)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 321, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel7)
+                .addContainerGap())
         );
 
         pack();
@@ -325,46 +332,55 @@ public class MainForm extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
 
+//        for (String line : txtSrc1.getText().split("\\n")) {
+//            if (line.startsWith("4")) {
+//                System.out.println(line);
+//            }
+//        }
         txtRes2.setText("");
         txtRes21.setText("");
         Map<Integer, List<Data>> m = new HashMap<Integer, List<Data>>();
         List<Data> listEF = new ArrayList<Data>();
         for (String line : txtSrc1.getText().split("\\n")) {
+            if (line.startsWith("4")) {
+                try {
+                    
+//                    System.out.println(line.subSequence(209, 227));
+//                    System.out.println(line.subSequence(227, 242));
+                   // System.out.println(line.split(" ")[1].split("-")[0]);
+                    
+                    Data efk = new Data();
+                    efk.setTanggal(line.split(" ")[1].split("-")[0]);
+                    efk.setNilaiDPP(Long.valueOf(line.substring(209, 227)
+                            .trim()
+                            .replace("-", "")
+                            .replace(",", "")));
+                    efk.setNilaiPPN(Long.valueOf(line.substring(227, 242)
+                            .trim()
+                            .replace("-", "")
+                            .replace(",", "")));
 
-            //  System.out.println(line.substring(9, 15));
-            try {
-                Data efk = new Data();
-                efk.setTanggal(line.substring(9, 15));
-                efk.setNilaiDPP(Long.valueOf(line.substring(132, 148)
-                        .trim()
-                        .replace("-", "")
-                        .replace(",", "")));
-                efk.setNilaiPPN(Long.valueOf(line.substring(148, 164)
-                        .trim()
-                        .replace("-", "")
-                        .replace(",", "")));
+                    if (efk.getNilaiPPN()!=0) {
+                        listEF.add(efk);
+                    }
+                    
 
-                if (Character.isDigit(efk.getTanggal().charAt(0))) {
-                    listEF.add(efk);
+                } catch (Exception exception) {
                 }
-
-            } catch (Exception exception) {
             }
 
         }
 
         for (Data efk : listEF) {
 
-            //System.out.println(efk.getTanggal().substring(0, 2));
             try {
-                if (efk.getTanggal().split("-")[1].equals(cmbBln.getSelectedItem().toString())) {
-                    List<Data> lst = m.get(Integer.valueOf(efk.getTanggal().split("-")[0]));
-                    if (lst == null) {
-                        lst = new ArrayList<Data>();
-                    }
-                    lst.add(efk);
-                    m.put(Integer.valueOf(efk.getTanggal().split("-")[0]), lst);
+                List<Data> lst = m.get(Integer.valueOf(efk.getTanggal()));
+                if (lst == null) {
+                    lst = new ArrayList<Data>();
                 }
+                lst.add(efk);
+                m.put(Integer.valueOf(efk.getTanggal()), lst);
+
             } catch (Exception e) {
             }
 
@@ -394,30 +410,6 @@ public class MainForm extends javax.swing.JFrame {
         txtRes21.setCaretPosition(0);
 
     }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void btnLoadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoadActionPerformed
-        // TODO add your handling code here:
-        List<String> s = new ArrayList<String>();
-        cmbBln.removeAllItems();
-        for (String line : txtSrc1.getText().split("\\n")) {
-            try {
-                if (Character.isDigit(line.substring(9, 15).charAt(0))) {
-                    //System.out.println(line.substring(9, 15).split("-")[1]);
-                    s.add(line.substring(9, 15).split("-")[1]);
-                }
-            } catch (Exception e) {
-
-            }
-        }
-
-        Set setItems = new LinkedHashSet(s);
-        s.clear();
-        s.addAll(setItems);
-
-        for (String ss : s) {
-            cmbBln.addItem(ss);
-        }
-    }//GEN-LAST:event_btnLoadActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
 
@@ -482,7 +474,7 @@ public class MainForm extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-       
+
 //        for (String line : txtSrc.getText().split("\\n")) {
 //            if(line.contains("Approval Sukses")){
 //                System.out.println(line.split("	")[5].split(" ")[2]);
@@ -509,7 +501,7 @@ public class MainForm extends javax.swing.JFrame {
         }
 
         for (Data efk : listEF) {
-           List<Data> lst = m.get(Integer.valueOf(efk.getTanggal()));
+            List<Data> lst = m.get(Integer.valueOf(efk.getTanggal()));
             if (lst == null) {
 
                 lst = new ArrayList<Data>();
@@ -542,6 +534,89 @@ public class MainForm extends javax.swing.JFrame {
         txtRes2.setCaretPosition(0);
 
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        
+        
+//        for (String line : txtSrc1.getText().split("\\n")) {
+//            if (line.startsWith("4")) {
+//                System.out.println(line);
+//            }
+//        }
+        txtRes2.setText("");
+        txtRes21.setText("");
+        Map<Integer, List<Data>> m = new HashMap<Integer, List<Data>>();
+        List<Data> listEF = new ArrayList<Data>();
+        for (String line : txtSrc1.getText().split("\\n")) {
+            if (line.startsWith("4")) {
+                try {
+                    
+//                    System.out.println(line.subSequence(209, 227));
+//                    System.out.println(line.subSequence(227, 242));
+                   // System.out.println(line.split(" ")[1].split("-")[0]);
+                    
+                    Data efk = new Data();
+                    efk.setTanggal(line.split(" ")[1].split("-")[0]);
+                    efk.setNilaiDPP(Long.valueOf(line.substring(209, 227)
+                            .trim()
+                            .replace("-", "")
+                            .replace(",", "")));
+                    efk.setNilaiPPN(Long.valueOf(line.substring(227, 242)
+                            .trim()
+                            .replace("-", "")
+                            .replace(",", "")));
+
+                    if (efk.getNilaiPPN()==0) {
+                        listEF.add(efk);
+                    }
+                    
+
+                } catch (Exception exception) {
+                }
+            }
+
+        }
+
+        for (Data efk : listEF) {
+
+            try {
+                List<Data> lst = m.get(Integer.valueOf(efk.getTanggal()));
+                if (lst == null) {
+                    lst = new ArrayList<Data>();
+                }
+                lst.add(efk);
+                m.put(Integer.valueOf(efk.getTanggal()), lst);
+
+            } catch (Exception e) {
+            }
+
+        }
+
+        StringBuilder sbJml = new StringBuilder();
+        StringBuilder sbNilai = new StringBuilder();
+        for (int i = 1; i <= 31; i++) {
+            if (m.get(i) != null) {
+                //System.out.println(i + " : " + m.get(i).size());
+                sbJml.append(m.get(i).size()).append("\n");
+
+                long nilai = 0L;
+                for (Data ef : m.get(i)) {
+                    nilai += (ef.getNilaiPPN() + ef.getNilaiDPP());
+                }
+                sbNilai.append(Long.toString(nilai)).append("\n");
+            } else {
+                //System.out.println(i);
+                sbJml.append("\n");
+                sbNilai.append("\n");
+            }
+        }
+        txtRes1.setText(sbJml.toString());
+        txtRes21.setText(sbNilai.toString());
+        txtRes1.setCaretPosition(0);
+        txtRes21.setCaretPosition(0);
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -581,9 +656,8 @@ public class MainForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnLoad;
-    private javax.swing.JComboBox cmbBln;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
@@ -593,6 +667,7 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
