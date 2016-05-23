@@ -63,7 +63,7 @@ public class MainForm extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("EF-NR COPAS TOOL");
+        setTitle("LAZYTOOL - EFAKTUR NR BY DATE OF MONTH");
         setResizable(false);
 
         txtSrc1.setColumns(20);
