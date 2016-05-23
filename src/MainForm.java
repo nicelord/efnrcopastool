@@ -342,7 +342,7 @@ public class MainForm extends javax.swing.JFrame {
         Map<Integer, List<Data>> m = new HashMap<Integer, List<Data>>();
         List<Data> listEF = new ArrayList<Data>();
         for (String line : txtSrc1.getText().split("\\n")) {
-            if (line.startsWith("4")) {
+            if (line.startsWith("4") | line.startsWith("5") | line.startsWith("6")) {
                 try {
                     
 //                    System.out.println(line.subSequence(209, 227));
@@ -549,7 +549,7 @@ public class MainForm extends javax.swing.JFrame {
         Map<Integer, List<Data>> m = new HashMap<Integer, List<Data>>();
         List<Data> listEF = new ArrayList<Data>();
         for (String line : txtSrc1.getText().split("\\n")) {
-            if (line.startsWith("4")) {
+            if (line.startsWith("4") | line.startsWith("5") | line.startsWith("6")) {
                 try {
                     
 //                    System.out.println(line.subSequence(209, 227));
